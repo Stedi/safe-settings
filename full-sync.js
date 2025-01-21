@@ -1,6 +1,8 @@
 const { createProbot } = require('probot')
 const appFn = require('./')
 
+require('dotenv').config()
+
 const probot = createProbot()
 probot.log.info('Starting full sync.')
 const app = appFn(probot, {})
